@@ -10,8 +10,8 @@ Host = "0.0.0.0"
 Port = 8585
 
 # Basic authentication settings for web UI
-User = "$HTTP_USER"
-Pass = "$HTTP_PASS"
+User =
+Pass =
 
 # IP addresses which should be allowed to access the web UI
 # For example, ["10.0.0.0/8"]
@@ -33,7 +33,7 @@ OnExit = "ignore"
 # For example, dnsmasq would include "/etc/dnsmasq.conf"
 # NOTE:  It wont let you edit "program.toml" this way
 #ConfigurationFiles = []
-ConfigurationFiles = ["/etc/hosts","etc/dnsmasq.conf","/etc/webproc.toml","/etc/resolv.conf"]
+ConfigurationFiles = ["etc/dnsmasq.conf","/etc/webproc.toml"]
 
 # After the restart signal (SIGINT) has been sent, webproc will wait for RestartTimeout before
 # forcibly restarting the process (SIGKILL).
